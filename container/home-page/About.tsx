@@ -1139,9 +1139,41 @@ export default function BusinessDevelopmentSite() {
                 <div className="relative z-10 flex-1 flex flex-col justify-center">
                   <p className="text-gray-700 leading-relaxed mb-4 font-medium">{step.description}</p>
                   <ul className="text-blue-700 text-sm space-y-1 mb-4 pl-4 list-disc">
-                    <li>Key Outcome 1 for {step.name}</li>
-                    <li>Key Outcome 2 for {step.name}</li>
-                    <li>Key Outcome 3 for {step.name}</li>
+                    {step.name === "Enroll" && (
+                      <>
+                        <li>Personalized learning path assessment</li>
+                        <li>Access to industry-leading curriculum</li>
+                        <li>Dedicated mentor assignment</li>
+                      </>
+                    )}
+                    {step.name === "Get Trained" && (
+                      <>
+                        <li>Hands-on practical skill development</li>
+                        <li>Real-world business case studies</li>
+                        <li>Interactive sessions with industry experts</li>
+                      </>
+                    )}
+                    {step.name === "Build Projects" && (
+                      <>
+                        <li>Work on live client projects</li>
+                        <li>Build a professional portfolio</li>
+                        <li>Gain practical implementation experience</li>
+                      </>
+                    )}
+                    {step.name === "Get Certified" && (
+                      <>
+                        <li>Industry-recognized certification</li>
+                        <li>Skill validation and assessment</li>
+                        <li>Professional credibility enhancement</li>
+                      </>
+                    )}
+                    {step.name === "Launch Yourself" && (
+                      <>
+                        <li>Career placement assistance</li>
+                        <li>Business networking opportunities</li>
+                        <li>Ongoing professional support</li>
+                      </>
+                    )}
                   </ul>
                 </div>
                 {/* Divider and Quote */}
