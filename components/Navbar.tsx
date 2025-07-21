@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { navbarItems } from "@/constants";
+import MobileNav from "./MobileNav";
 
 
 export default function Navbar() {
@@ -78,7 +79,7 @@ export default function Navbar() {
           </motion.div>
 
           {/* Enhanced Navigation */}
-          <div className="flex-1 flex justify-center items-center">
+          <div className="hidden md:flex flex-1 justify-center items-center">
             <div className="flex items-center justify-center space-x-12">
               {navbarItems.filter(item => item.title !== "Contact").map((item, index) => (
                 <motion.div
@@ -116,9 +117,14 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* MobileNav Trigger */}
+          <div className="md:hidden">
+            <MobileNav />
+          </div>
+
           {/* Contact Button */}
           <motion.div
-            className="flex items-center"
+            className="hidden md:flex items-center"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
