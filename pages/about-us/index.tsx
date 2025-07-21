@@ -122,30 +122,35 @@ const teamMembers = [
     position: "Director & Head of Strategy",
     image: "/team1.webp",
     description: "Driving vision, growth, and strategic partnerships at PerpeX.",
+    objectPosition: "object-center",
   },
   {
     name: "Shahinsha Thasveer",
     position: "Head of Corporate Relations",
     image: "/team2.webp",
     description: "Building and nurturing industry connections for student success.",
+    objectPosition: "object-top",
   },
   {
     name: "Navas Shereef",
     position: "Lead Trainer & Program Designer",
     image: "/team3.webp",
     description: "Crafting practical, industry-aligned training for future leaders.",
+    objectPosition: "object-top",
   },
   {
     name: "Mohammed Ashif",
     position: "Placement & Student Success Manager",
     image: "/team4.webp",
     description: "Ensuring every student achieves their career goals with PerpeX.",
+    objectPosition: "object-center",
   },
   {
     name: "Shibili Rehman",
     position: "Entrepreneurship & Innovation Coach",
     image: "/team5.webp",
     description: "Empowering students to become entrepreneurs and innovators.",
+    objectPosition: "object-center",
   },
 ];
 
@@ -631,17 +636,17 @@ export default function About() {
                   
                   {/* Profile Image */}
                   <div className="relative z-10 flex flex-col items-center mb-6">
-                    <div className="relative w-32 h-32 mb-4">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <div className="relative w-48 h-48 mb-4">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
                       <Image
                         src={member.image}
                         alt={member.name}
-                        width={128}
-                        height={128}
-                        className="w-full h-full object-cover rounded-full border-2 border-blue-400/30 group-hover:border-blue-400/50 transition-all duration-500"
+                        width={256}
+                        height={256}
+                        className={`w-full h-full object-cover ${member.objectPosition} rounded-2xl border-2 border-blue-400/30 group-hover:border-blue-400/50 transition-all duration-500`}
                         priority={index < 3}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent rounded-full"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent rounded-2xl"></div>
                     </div>
                   </div>
 
