@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   GraduationCap, TrendingUp, Target, Building2, ArrowRight, Star
 } from "lucide-react";
+import { useRouter } from "next/router";
 
 const pillars = [
   {
@@ -142,9 +143,9 @@ interface Pillar {
 
 const PillarCard = ({ pillar }: { pillar: Pillar }) => {
   const Icon = pillar.icon;
-  
+  const router = useRouter();
   const handleExplore = () => {
-    console.log(`Exploring ${pillar.title}`);
+    router.push("/contact");
   };
   
   return (

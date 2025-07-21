@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play } from "lucide-react";
+import { useRouter } from "next/router";
 
 // Enhanced Mouse Position Hook
 interface MousePosition {
@@ -449,6 +450,7 @@ import MacbookScrollDemo from "@/data/data";
 // Main Hero Component
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsVisible(true);
@@ -564,6 +566,7 @@ const Hero = () => {
             >
               <button 
                 className="group relative px-10 py-4 bg-white text-blue-900 font-semibold text-lg rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 transition-all duration-300"
+                onClick={() => router.push("/contact")}
               >
                 <div 
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -579,6 +582,7 @@ const Hero = () => {
 
               <button 
                 className="px-10 py-4 border border-white/30 text-white text-lg rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10 active:scale-95 transition-all duration-300"
+                onClick={() => router.push("/contact")}
               >
                 <span className="flex items-center">
                   <Play className="mr-2 w-5 h-5" />

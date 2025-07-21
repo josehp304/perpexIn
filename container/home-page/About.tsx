@@ -3,6 +3,7 @@ import { ArrowRight, Instagram, Linkedin, MessageCircle, Award, Users, BookOpen,
 import { AnimatePresence, motion } from "framer-motion";
 import AdmissionsPage from '@/components/ui/timeline';
 import { getCourses, Course } from "../../lib/getCourses";
+import { useRouter } from "next/router";
 
 // Add type definitions for GSAP and ScrollTrigger
 declare global {
@@ -288,6 +289,7 @@ const timelineData = [
 ];
 
 const ScrollAnimationSection = () => {
+  const router = useRouter();
   // Define the 5-phase curriculum data
   const whyChooseUs = [
     { 
@@ -773,7 +775,7 @@ const ScrollAnimationSection = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="card-cta">
+              <button className="card-cta" onClick={() => router.push("/contact")}>
                 Start Phase {index + 1}
               </button>
             </div>
