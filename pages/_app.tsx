@@ -3,6 +3,9 @@ import { Footer, Navbar } from "@/components";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from "next/script";
+
 
 // Dynamically import Preloader to avoid SSR issues with gsap
 const Preloader = dynamic(() => import("@/components/Preloader"), { ssr: false });
@@ -81,18 +84,33 @@ export default function App({
 	}
 
 	return (
-		<div className="flex flex-col min-h-screen">
-			<Navbar />
-			<main className="flex-grow">
-				<AnimatePresence mode="wait">
-					<Component
-						key={router.route}
-						{...pageProps}
-					/>
-				</AnimatePresence>
-			</main>
-			{/* Render footer only if the current route is not in the hideFooterRoutes array */}
-			{!hideFooterRoutes.includes(router.route) && <Footer />}
-		</div>
+		<>
+			{/* Google Analytics Script */}
+			<Script
+				strategy="afterInteractive"
+				src="https://www.googletagmanager.com/gtag/js?id=G-8WHQZRH1KB"
+			/>
+			<Script id="gtag-init" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-8WHQZRH1KB');
+				`}
+			</Script>
+			<div className="flex flex-col min-h-screen">
+				<Navbar />
+				<main className="flex-grow">
+					<AnimatePresence mode="wait">
+						<Component
+							key={router.route}
+							{...pageProps}
+						/>
+					</AnimatePresence>
+				</main>
+				{/* Render footer only if the current route is not in the hideFooterRoutes array */}
+				{!hideFooterRoutes.includes(router.route) && <Footer />}
+			</div>
+		</>
 	);
 }
