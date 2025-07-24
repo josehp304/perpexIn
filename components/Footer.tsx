@@ -6,23 +6,20 @@ import { TextHoverEffectDemo } from "@/data/data";
 
 const navigation = {
   services: [
-    { name: "PerpeX Institute", href: "#" },
-    { name: "SaleX", href: "#" },
-    { name: "MarketriX", href: "#" },
-    { name: "PlaceX", href: "#" },
+    { name: "PerpeX Institute", href: "https://perpex.in/" },
+    { name: "SaleX", href: "https://perpex.in/" },
+    { name: "MarketriX", href: "https://perpex.in/" },
+    { name: "PlaceX", href: "https://perpex.in/" },
   ],
-  company: [
-    { name: "About Us", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" },
-  ],
+
   quickLinks: [
-    { name: "Placements", href: "#" },
-    { name: "Corporate Training", href: "#" },
-    { name: "Student Stories", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Placements", href: "/placements" },
+    { name: "Corporate Training", href: "/corporate-training" },
+    { name: "Student Stories", href: "/student-stories" },
+    { name: "Blogs", href: "/" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Careers", href: "/career" },
+    { name: "Contact", href: "/contact" },
   ],
 };
 
@@ -172,18 +169,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div>
-                <h4 className="text-white font-semibold mb-3 text-sm">Company</h4>
-                <ul className="space-y-2">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-gray-400 hover:text-white transition-colors text-xs">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+             
             </div>
 
             {/* Quick Links */}

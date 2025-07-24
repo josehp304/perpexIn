@@ -165,7 +165,7 @@ export default function Ready() {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <motion.a
-            href="mailto:admissions@perpexbschool.in"
+            href="/contact"
             className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-2xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

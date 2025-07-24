@@ -42,6 +42,11 @@ export const navbarItems = [
   },
   {
     id: 9,
+    title: "Careers",
+    href: "/career",
+  },
+  {
+    id: 10,
     title: "Contact",
     href: "/contact",
   },
