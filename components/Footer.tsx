@@ -24,11 +24,6 @@ const navigation = {
     { name: "About Us", href: "#" },
     { name: "Contact", href: "#" },
   ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Legal Terms", href: "https://legislative.gov.in/legal-glossary/" },
-  ],
 };
 
 export default function Footer() {
@@ -191,25 +186,12 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links & Legal */}
+            {/* Quick Links */}
             <div className="space-y-6">
               <div>
                 <h4 className="text-white font-semibold mb-3 text-sm">Quick Links</h4>
                 <ul className="space-y-2">
                   {navigation.quickLinks.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-gray-400 hover:text-white transition-colors text-xs">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-white font-semibold mb-3 text-sm">Legal</h4>
-                <ul className="space-y-2">
-                  {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <Link href={item.href} className="text-gray-400 hover:text-white transition-colors text-xs">
                         {item.name}

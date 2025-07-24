@@ -17,7 +17,7 @@ const ContactOptions = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "919745100036"; // PERPEX WhatsApp number
+    const phoneNumber = "9745100036"; // PERPEX WhatsApp number
     const message = "Hello! I would like to get in touch with PERPEX.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
