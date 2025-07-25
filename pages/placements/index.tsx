@@ -122,6 +122,28 @@ const AnimatedCounter = ({ value, duration = 2000 }: AnimatedCounterProps) => {
   return <span>{count}{value.replace(/\d/g, '').replace(/[₹\+]/g, '')}</span>;
 };
 
+// Add this component above LogoMarquee
+const LogoImage = ({ logo }: { logo: { name: string; url: string } }) => {
+  const [error, setError] = useState(false);
+  if (error) {
+    return (
+      <span className="text-xs font-semibold text-white/70 flex items-center justify-center h-36 w-40">
+        {logo.name}
+      </span>
+    );
+  }
+  return (
+    <Image
+      src={logo.url}
+      alt={`${logo.name} logo`}
+      width={160}
+      height={90}
+      className="h-36 w-auto max-w-64 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+      onError={() => setError(true)}
+    />
+  );
+};
+
 // Logo Marquee - Same as home page
 const LogoMarquee = ({ logos, direction = "left", speed = 25 }: { logos: any[], direction?: "left" | "right", speed?: number }) => {
   return (
@@ -135,21 +157,7 @@ const LogoMarquee = ({ logos, direction = "left", speed = 25 }: { logos: any[], 
         {Array(8).fill(null).map((_, index) => (
           <div key={index} className="flex gap-4 shrink-0">
             {logos.map((logo, logoIndex) => (
-              <div
-                key={logoIndex}
-                className="flex items-center justify-center h-32 w-60 rounded-lg px-4 py-2 hover:scale-105 hover:-translate-y-1 transition-all duration-200"
-              >
-                <Image
-                  src={logo.url}
-                  alt={`${logo.name} logo`}
-                  className="h-36 w-auto max-w-64 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.parentElement!.innerHTML = `<span class="text-xs font-semibold text-white/70">${logo.name}</span>`;
-                  }}
-                />
-              </div>
+              <LogoImage key={logoIndex} logo={logo} />
             ))}
           </div>
         ))}
@@ -505,14 +513,14 @@ export default function PlacementsPage() {
           <h3 className="text-6xl font-black mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Ready to Get Placed?</h3>
           <p className="text-blue-100 mb-12 text-2xl font-light">Your career journey starts with a single step</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+            <button onClick={() => window.location.href="/contact"} className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
               Start Application
               <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
             </button>
-            <button className="group border-2 border-blue-400/50 hover:border-blue-300 hover:bg-blue-500/10 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white backdrop-blur-sm transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+            <a href="tel:+919745100036" className="group border-2 border-blue-400/50 hover:border-blue-300 hover:bg-blue-500/10 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white backdrop-blur-sm transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
               <Users className="w-6 h-6" />
               Talk to Counselor
-            </button>
+            </a>
           </div>
         </div>
       </div>

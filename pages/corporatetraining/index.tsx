@@ -583,7 +583,18 @@ export default function CorporateTrainingPage() {
                 <h2 className="text-6xl md:text-7xl font-black mb-8 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Get in Touch</h2>
                 <p className="text-2xl text-blue-100 max-w-4xl mx-auto mb-12 font-light">Let us know your needs and we&apos;ll craft a custom training solution for you</p>
               </div>
-              <TrainingForm />
+              <div className="w-full h-[80vh] bg-white shadow-2xl rounded-2xl overflow-hidden">
+                <iframe
+                  src="https://tally.so/embed/mYbXMB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="PerpeX Business School Corporate Training Inquiry Form"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -595,14 +606,14 @@ export default function CorporateTrainingPage() {
           <h3 className="text-6xl font-black mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Ready to Upskill?</h3>
           <p className="text-blue-100 mb-12 text-2xl font-light">Empower your team with the best in corporate learning</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+            <button onClick={() => window.location.href='/contact'} className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
               Request Proposal
               <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
             </button>
-            <button className="group border-2 border-blue-400/50 hover:border-blue-300 hover:bg-blue-500/10 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white backdrop-blur-sm transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+            <a href="tel:+919745100036" className="group border-2 border-blue-400/50 hover:border-blue-300 hover:bg-blue-500/10 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white backdrop-blur-sm transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
               <Users className="w-6 h-6" />
               Talk to Consultant
-            </button>
+            </a>
           </div>
         </div>
       </div>
