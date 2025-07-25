@@ -18,7 +18,7 @@ const navigation = {
     { name: "Student Stories", href: "/student-stories" },
     { name: "Blogs", href: "/" },
     { name: "About Us", href: "/about-us" },
-    { name: "Careers", href: "/career" },
+    { name: "Careers", href: "mailto:Support@perpexbschool.in" },
     { name: "Contact", href: "/contact" },
   ],
 };

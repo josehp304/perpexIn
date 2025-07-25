@@ -162,46 +162,7 @@ export default function BlogPage() {
       </div>
 
       {/* Newsletter Section */}
-      <div className="relative mt-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-blue-800/10 backdrop-blur-xl"></div>
-        <div className="relative max-w-5xl mx-auto px-4 py-20 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500/15 to-blue-600/15 backdrop-blur-xl border border-blue-400/25 rounded-full px-8 py-3 mb-8 shadow-xl">
-              <Star className="w-6 h-6 text-blue-400" />
-              <span className="text-lg font-bold text-blue-200">Stay Updated</span>
-            </div>
-            <h2 className="text-6xl font-black mb-8 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Subscribe to Our Newsletter
-            </h2>
-            <p className="text-2xl text-blue-100 max-w-3xl mx-auto mb-12 font-light">
-              Get the latest insights, tips, and updates delivered directly to your inbox.
-            </p>
-            
-            <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-6 py-4 bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl text-white placeholder-blue-300/50 focus:border-blue-300/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl font-bold transition-all duration-300 text-white shadow-lg hover:shadow-blue-500/25"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="text-sm text-blue-300/80 mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      {/* Removed subscribe/newsletter section as requested */}
     </div>
   );
 } 

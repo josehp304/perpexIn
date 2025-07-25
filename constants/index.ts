@@ -43,7 +43,7 @@ export const navbarItems = [
   {
     id: 9,
     title: "Careers",
-    href: "/career",
+    href: "mailto:Support@perpexbschool.in",
   },
   {
     id: 10,
