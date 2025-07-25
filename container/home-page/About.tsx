@@ -876,12 +876,14 @@ const AnimatedStats = () => {
               <div className="relative p-8 text-center transform group-hover:scale-105 transition-transform duration-300">
                 {/* Number */}
                 <div className="mb-4">
-                  <div className="text-5xl md:text-6xl font-light text-white mb-2 tracking-tight leading-none">
-                    <CountingNumber 
-                      target={stat.target} 
-                      suffix={stat.suffix}
-                      duration={2000 + index * 200}
-                    />
+                  <div className="flex justify-center items-center min-h-[2.5em]">
+                    <span className="font-mono text-5xl md:text-6xl font-light text-white mb-2 tracking-tight leading-none">
+                      <CountingNumber 
+                        target={stat.target} 
+                        suffix={stat.suffix}
+                        duration={2000 + index * 200}
+                      />
+                    </span>
                   </div>
                   {/* Animated underline */}
                   <div className="w-12 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>

@@ -40,6 +40,10 @@ export default function App({
 	// Preloader state
 	const [loading, setLoading] = useState(true);
 
+	useEffect(() => {
+		setLoading(false);
+	}, []);
+
 	// Initialize Chatbase
 	useEffect(() => {
 		// Chatbase initialization script

@@ -472,7 +472,7 @@ export default function AdmissionsPage() {
           <h3 className="text-6xl font-black mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Ready to Excel?</h3>
           <p className="text-blue-100 mb-12 text-2xl font-light">Your journey to excellence starts with a single step</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+            <button onClick={() => window.location.href="/"} className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
               Start Application
               <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
             </button>

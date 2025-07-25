@@ -41,6 +41,9 @@ export default function Navbar() {
         <div className="absolute inset-0 transition-all duration-500">
 
 
+{/* 
+make the size of the text smaller  */}
+
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-between max-w-7xl mx-auto">
@@ -80,7 +83,7 @@ export default function Navbar() {
 
           {/* Enhanced Navigation */}
           <div className="hidden md:flex flex-1 justify-center items-center">
-            <div className="flex items-center justify-center space-x-12">
+            <div className="flex items-center justify-center space-x-16">
               {navbarItems.filter(item => item.title !== "Contact").map((item, index) => (
                 <motion.div
                   key={item.id}
@@ -89,9 +92,9 @@ export default function Navbar() {
                   transition={{ delay: index * 0.1 + 0.3 }}
                   className="whitespace-nowrap"
                 >
-                  <Link href={item.href} className="group relative block py-2">
+                  <Link href={item.href} className="group relative block py-0.5 px-2">
                     <motion.span
-                      className="text-white text-sm font-medium tracking-wide relative z-10 transition-colors group-hover:text-blue-300"
+                      className="text-white text-[10px] font-normal tracking-wide relative z-10 transition-colors group-hover:text-blue-300"
                       whileHover={{ y: -1 }}
                       transition={{ type: "spring", stiffness: 400 }}
                     >

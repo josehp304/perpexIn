@@ -42,3 +42,28 @@
 .spacer{
     height: 100vh;
 }
+
+// Mobile styles
+@media (max-width: 767px) {
+  .gallery {
+    flex-direction: column;
+    height: auto;
+    gap: 4vw;
+    padding: 2vw 0;
+    .column {
+      width: 100% !important;
+      min-width: 0;
+      flex-direction: row;
+      gap: 2vw;
+      height: 40vw;
+      top: 0 !important;
+      .imageContainer {
+        width: 33.33vw;
+        height: 40vw;
+        min-width: 33.33vw;
+        min-height: 40vw;
+        border-radius: 2vw;
+      }
+    }
+  }
+}

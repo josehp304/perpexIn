@@ -145,12 +145,12 @@ const PillarCard = ({ pillar }: { pillar: Pillar }) => {
   const Icon = pillar.icon;
   const router = useRouter();
   const handleExplore = () => {
-    router.push("/contact");
+    window.open('https://perpex.in', '_blank');
   };
   
   return (
-    <div className="w-screen min-w-screen flex-shrink-0 h-full px-4 sm:px-6 lg:px-8 flex items-center justify-center relative">
-      <div className="relative max-w-sm sm:max-w-md lg:max-w-2xl xl:max-w-3xl w-full mx-auto lg:ml-auto lg:mr-12 h-[85vh] sm:h-[90vh] lg:h-[95vh] overflow-hidden">
+    <div className="w-screen min-w-screen flex-shrink-0 h-full px-2 sm:px-4 lg:px-6 flex items-center justify-center relative">
+      <div className="relative max-w-xs sm:max-w-sm lg:max-w-lg xl:max-w-xl w-full mx-auto lg:ml-auto lg:mr-12 h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
         
         {/* Main card with elegant design */}
         <div className="relative w-full h-full bg-black/40 backdrop-blur-2xl rounded-2xl lg:rounded-[2.5rem] shadow-2xl border border-white/10 overflow-hidden">
@@ -163,51 +163,51 @@ const PillarCard = ({ pillar }: { pillar: Pillar }) => {
           <div className="absolute inset-[1px] rounded-2xl lg:rounded-[2.4rem] bg-gradient-to-br from-white/5 via-transparent to-black/10" />
           
           {/* Header section */}
-          <header className="relative z-10 p-6 sm:p-8 lg:p-12">
-            <div className="flex items-start justify-between mb-6 lg:mb-8">
+          <header className="relative z-10 p-4 sm:p-6 lg:p-8">
+            <div className="flex items-start justify-between mb-4 lg:mb-6">
               {/* Large number */}
-              <div className={`text-4xl sm:text-6xl lg:text-8xl font-extralight bg-gradient-to-br ${pillar.accent} bg-clip-text text-transparent opacity-90`}>
+              <div className={`text-2xl sm:text-4xl lg:text-6xl font-extralight bg-gradient-to-br ${pillar.accent} bg-clip-text text-transparent opacity-90`}>
                 {pillar.number}
               </div>
               
               {/* Icon with elegant background */}
-              <div className={`relative w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-xl lg:rounded-2xl bg-gradient-to-br ${pillar.accent} p-0.5`}>
+              <div className={`relative w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br ${pillar.accent} p-0.5`}>
                 <div className="w-full h-full bg-black/60 backdrop-blur-xl rounded-xl lg:rounded-2xl flex items-center justify-center">
-                  <Icon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
+                  <Icon className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
-                <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-4 h-4 lg:w-6 lg:h-6 bg-white rounded-full flex items-center justify-center">
-                  <Star className="w-2 h-2 lg:w-3 lg:h-3 text-yellow-500" />
+                <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-3 h-3 lg:w-4 lg:h-4 bg-white rounded-full flex items-center justify-center">
+                  <Star className="w-1.5 h-1.5 lg:w-2 h-2 text-yellow-500" />
                 </div>
               </div>
             </div>
             
             {/* Title and description */}
-            <div className="mb-6 lg:mb-10">
-              <h2 className="text-2xl sm:text-4xl lg:text-6xl font-extralight text-white mb-2 lg:mb-4 tracking-tight leading-tight">
+            <div className="mb-4 lg:mb-6">
+              <h2 className="text-lg sm:text-2xl lg:text-4xl font-extralight text-white mb-1 lg:mb-2 tracking-tight leading-tight">
                 {pillar.title}
               </h2>
-              <p className="text-base sm:text-lg lg:text-2xl font-light text-white/70 leading-relaxed">
+              <p className="text-xs sm:text-sm lg:text-lg font-light text-white/70 leading-relaxed">
                 {pillar.description}
               </p>
             </div>
             
             {/* Elegant separator */}
-            <div className="relative mb-6 lg:mb-12">
-              <div className={`w-16 sm:w-24 lg:w-32 h-0.5 lg:h-1 bg-gradient-to-r ${pillar.accent} rounded-full`} />
-              <div className="absolute top-0 left-0 w-4 sm:w-6 lg:w-8 h-0.5 lg:h-1 bg-white rounded-full animate-pulse" />
+            <div className="relative mb-4 lg:mb-6">
+              <div className={`w-10 sm:w-16 lg:w-24 h-0.5 lg:h-1 bg-gradient-to-r ${pillar.accent} rounded-full`} />
+              <div className="absolute top-0 left-0 w-2 sm:w-4 lg:w-6 h-0.5 lg:h-1 bg-white rounded-full animate-pulse" />
             </div>
           </header>
           
           {/* Highlights section */}
-          <div className="relative z-10 px-6 sm:px-8 lg:px-12 pb-4 lg:pb-8 flex-1">
-            <ul className="space-y-3 sm:space-y-4 lg:space-y-6">
+          <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-2 lg:pb-4 flex-1">
+            <ul className="space-y-2 sm:space-y-3 lg:space-y-4">
               {pillar.highlights.map((highlight: string | number | bigint | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<React.AwaitedReactNode> | Iterable<React.ReactNode> | null | undefined, idx: React.Key | null | undefined) => (
-                <li key={idx} className="group flex items-start hover:translate-x-1 lg:hover:translate-x-3 transition-all duration-300">
-                  <div className="relative mr-3 sm:mr-4 lg:mr-6 mt-1 lg:mt-2">
-                    <div className={`w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 rounded-full bg-gradient-to-br ${pillar.accent} shadow-lg group-hover:scale-125 transition-transform duration-300`} />
-                    <div className={`absolute inset-0 w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 rounded-full bg-gradient-to-br ${pillar.accent} blur-sm opacity-50 group-hover:opacity-100 transition-opacity duration-300`} />
+                <li key={idx} className="group flex items-start hover:translate-x-1 lg:hover:translate-x-2 transition-all duration-300">
+                  <div className="relative mr-2 sm:mr-3 lg:mr-4 mt-1 lg:mt-1.5">
+                    <div className={`w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 lg:w-3.5 lg:h-3.5 rounded-full bg-gradient-to-br ${pillar.accent} shadow-lg group-hover:scale-110 transition-transform duration-300`} />
+                    <div className={`absolute inset-0 w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 lg:w-3.5 lg:h-3.5 rounded-full bg-gradient-to-br ${pillar.accent} blur-sm opacity-50 group-hover:opacity-100 transition-opacity duration-300`} />
                   </div>
-                  <span className="text-white/80 text-sm sm:text-base lg:text-xl font-light leading-relaxed group-hover:text-white transition-colors duration-300 flex-1">
+                  <span className="text-white/80 text-xs sm:text-sm lg:text-base font-light leading-relaxed group-hover:text-white transition-colors duration-300 flex-1">
                     {highlight}
                   </span>
                 </li>
@@ -216,17 +216,17 @@ const PillarCard = ({ pillar }: { pillar: Pillar }) => {
           </div>
           
           {/* CTA section */}
-          <footer className="relative z-10 p-6 sm:p-8 lg:p-12 pt-4 lg:pt-8">
+          <footer className="relative z-10 p-4 sm:p-6 lg:p-8 pt-2 lg:pt-4">
             <button 
               onClick={handleExplore}
-              className={`w-full py-3 sm:py-4 lg:py-6 px-4 sm:px-6 lg:px-8 rounded-xl lg:rounded-2xl bg-gradient-to-r ${pillar.accent} hover:shadow-2xl text-white transition-all duration-500 font-medium text-sm sm:text-base lg:text-lg flex items-center justify-center group relative overflow-hidden transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black/50`}
+              className={`w-full py-2 sm:py-3 lg:py-4 px-2 sm:px-4 lg:px-6 rounded-xl lg:rounded-2xl bg-gradient-to-r ${pillar.accent} hover:shadow-2xl text-white transition-all duration-500 font-medium text-xs sm:text-sm lg:text-base flex items-center justify-center group relative overflow-hidden transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black/50`}
               aria-label={`Explore ${pillar.title} in detail`}
             >
               {/* Button background animation */}
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
-              <span className="relative z-10 mr-2 lg:mr-4">Explore {pillar.title}</span>
-              <ArrowRight className="relative z-10 w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:translate-x-1 lg:group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="relative z-10 mr-1 lg:mr-2">Explore {pillar.title}</span>
+              <ArrowRight className="relative z-10 w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 lg:group-hover:translate-x-2 transition-transform duration-300" />
             </button>
           </footer>
           

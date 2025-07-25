@@ -1,5 +1,5 @@
 'use client';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import styles from './page.module.scss';
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis';
@@ -21,9 +21,15 @@ const images = [
  
 ];
 
+function isMobile() {
+  if (typeof window === 'undefined') return false;
+  return window.innerWidth <= 767;
+}
+
 export default function Home() {
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  const [mobile, setMobile] = useState(false);
   
   const { scrollYProgress } = useScroll({
     target: gallery,
@@ -63,6 +69,34 @@ export default function Home() {
       window.removeEventListener('resize', resize);
     };
   }, []);
+
+  useEffect(() => {
+    setMobile(isMobile());
+    const handleResize = () => setMobile(isMobile());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  if (mobile) {
+    return (
+      <main className={styles.main}>
+        <div className={styles.gallery} style={{ flexDirection: 'column', height: 'auto', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div style={{ width: '90vw', height: 'auto', position: 'relative' }}>
+              <Image
+                src="/mobilegal.png"
+                alt="Mobile Gallery"
+                width={900}
+                height={1200}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain', borderRadius: '2vw' }}
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    );
+  }
   
   return (
     <main className={styles.main}>

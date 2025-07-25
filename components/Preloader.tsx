@@ -11,7 +11,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   React.useEffect(() => {
     let start = Date.now();
     let raf: number;
-    const duration = 5000; // 5 seconds
+    const duration = 1400; // 1 second
     function animate() {
       const elapsed = Date.now() - start;
       const percent = Math.min(elapsed / duration, 1);

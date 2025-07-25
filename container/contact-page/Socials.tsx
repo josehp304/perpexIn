@@ -75,7 +75,7 @@ export default function Socials() {
 							<div className="flex w-fit h-fit gap-x-[5px] group">
 								<div className="rounded-[50px] border-[2px] border-[#21212155] group-hover:bg-red-600 py-[3px] px-[12px] cursor-pointer">
 								<h1 className="paragraph  font-NeueMontreal text-white font-bold">
-							Admissions Hotline : 
+							Admissions Phone Number : 
   <a 
     href="https://wa.me/919789985132?text=Dear%20PerpeX%20Business%20School%20Team%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20BD%20Training%20programs%20and%20placement%20support.%20Could%20you%20please%20provide%20more%20details%20about%20admissions%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Student" 
     target="_blank" 

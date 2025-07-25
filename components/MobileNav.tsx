@@ -29,13 +29,13 @@ export default function MobileNav() {
 								className="text-3xl cursor-pointer text-white"
 							/>
 						</div>
-						<ul className="h-full w-full flex justify-center text-left flex-col gap-[10px] padding-x">
+						<ul className="h-full w-full flex justify-center text-left flex-col gap-5 padding-x">
 							{navbarItems.map((item) => (
 								<Link
 									href={item.href}
 									key={item.id}
 									onClick={() => setToggle(false)}
-									className="text-[80px] leading-[67px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-white">
+									className="text-[32px] leading-[40px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-white">
 									{item.title}
 								</Link>
 							))}

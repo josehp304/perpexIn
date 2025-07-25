@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
+
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
       <section className="w-full padding-x bg-black">
         <div className="w-full flex flex-col">
           <div className="w-full margin">
-            <h1 className="heading tracking-[-1.3px] text-white font-semibold font-FoundersGrotesk uppercase">
+            <h1 className="heading tracking-[-1.3px] text-white font-semibold font-NeueMontreal uppercase">
               <div className="flex items-center gap-[5px]">
                 <motion.span
                   initial={{ width: 0 }}
@@ -24,16 +24,10 @@ export default function Hero() {
                     duration: 1,
                     delay: 0.5,
                   }}>
-                  <Image
-                    width={120}
-                    height={50}
-                    src="/perpex.webp"
-                    alt="img"
-                    className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px]"
-                  />
+                 
                 </motion.span>
-                <h1 className="heading text-white font-semibold font-FoundersGrotesk uppercase">
-                  Contact Us <br />
+                <h1 className="pt-10 sm:pt-12 text-[40px] sm:text-[40px] md:text-[40px] lg:text-[100px] xl:text-[100px] text-white font-light font-FoundersGrotesk">
+                  Contact Us
                 </h1>
               </div>
             

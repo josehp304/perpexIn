@@ -134,7 +134,7 @@ export default function Ready() {
 
         {/* Stats Section */}
         <motion.div 
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 w-full max-w-4xl mx-auto"
+          className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 sm:gap-x-8 w-full max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -142,7 +142,7 @@ export default function Ready() {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center group"
+              className="text-center group w-full max-w-xs mx-auto"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
