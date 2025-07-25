@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { Sparkles } from "lucide-react";
+import Link from 'next/link';
 
 interface ITestimonial {
   quote: string;
@@ -129,9 +130,9 @@ const SuccessStoriesPage = () => {
                             Unlocking potential, transforming careers, and celebrating real impact from our alumni and partners.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                            <a href="/contact" className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
+                            <Link href="/contact" className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
                                 Share Your Story
-                            </a>
+                            </Link>
                             <a href="tel:+919745100036" className="group border-2 border-blue-400/50 hover:border-blue-300 hover:bg-blue-500/10 px-12 py-5 rounded-full font-bold transition-all duration-500 text-white backdrop-blur-sm transform hover:scale-110 flex items-center justify-center gap-3 text-lg">
                                 Talk to Counselor
                             </a>
