@@ -5,10 +5,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from "next/script";
-
-
-// Dynamically import Preloader to avoid SSR issues with gsap
-const Preloader = dynamic(() => import("@/components/Preloader"), { ssr: false });
+import Preloader from "@/components/Preloader";
 
 // Declare Chatbase types
 declare global {
@@ -40,9 +37,7 @@ export default function App({
 	// Preloader state
 	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		setLoading(false);
-	}, []);
+	console.log("Loading state:", loading);
 
 	// Initialize Chatbase
 	useEffect(() => {

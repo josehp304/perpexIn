@@ -19,21 +19,63 @@ const jobRoles = [
   { title: "Organizational Development Consultant", salary: "₹15-30 LPA", icon: "🏢", growth: "+25%", openings: "600" },
 ];
 
-// Company Logos
-const logos1 = [
-  { name: "Tata Consultancy Services", url: "https://cdn.brandfetch.io/idw382nG0m/w/398/h/398/theme/dark/icon.png" },
-  { name: "Infosys", url: "https://cdn.brandfetch.io/idkGNnB58L/w/280/h/80/theme/dark/logo.png" },
-  { name: "Wipro", url: "https://cdn.brandfetch.io/idOeG0NYWQ/w/1448/h/1448/theme/dark/icon.jpeg" },
-  { name: "Accenture", url: "https://cdn.brandfetch.io/idSUrLOWbH/w/398/h/398/theme/dark/icon.png" },
-  { name: "Capgemini", url: "https://cdn.brandfetch.io/id4J58sqa_/w/512/h/512/theme/dark/icon.png" },
-];
-const logos2 = [
-  { name: "Deloitte", url: "https://cdn.brandfetch.io/idAnDTFapY/w/398/h/398/theme/dark/icon.png" },
-  { name: "EY", url: "https://cdn.brandfetch.io/idkmTr6hAO/w/398/h/398/theme/dark/icon.png" },
-  { name: "KPMG", url: "https://cdn.brandfetch.io/idGbIiG9e-/w/398/h/398/theme/dark/icon.png" },
-  { name: "PwC", url: "https://cdn.brandfetch.io/idw382nG0m/w/398/h/398/theme/dark/icon.png" },
-  { name: "IBM", url: "https://cdn.brandfetch.io/id4Ol9YiiE/w/577/h/239/theme/dark/logo.png" },
-];
+// Company Logos - Same as home page
+const logos1 = Array.from({ length: 35 }, (_, i) => ({
+  name: `Client Logo ${i + 1}`,
+  url: `/l${i + 1}.png`,
+}));
+
+const logos2 = Array.from({ length: 34 }, (_, i) => ({
+  name: `Client Logo ${i + 36}`,
+  url: `/l${i + 36}.png`,
+})).filter(logo => logo.name !== 'Client Logo 49');
+
+// Logo Marquee - Same as home page
+const LogoMarquee = ({ logos, direction = "left", speed = 25 }: { logos: any[], direction?: "left" | "right", speed?: number }) => {
+  return (
+    <div className="relative overflow-hidden py-2">
+      <div
+        className="flex gap-8 whitespace-nowrap"
+        style={{
+          animation: `marquee${direction === "left" ? "Left" : "Right"} ${speed}s linear infinite`
+        }}
+      >
+        {Array(8).fill(null).map((_, index) => (
+          <div key={index} className="flex gap-4 shrink-0">
+            {logos.map((logo, logoIndex) => (
+              <div
+                key={logoIndex}
+                className="flex items-center justify-center h-32 w-60 rounded-lg px-4 py-2 hover:scale-105 hover:-translate-y-1 transition-all duration-200"
+              >
+                <img
+                  src={logo.url}
+                  alt={`${logo.name} logo`}
+                  className="h-36 w-auto max-w-64 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `<span class="text-xs font-semibold text-white/70">${logo.name}</span>`;
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      
+      <style jsx>{`
+        @keyframes marqueeLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-4000px); }
+        }
+        @keyframes marqueeRight {
+          0% { transform: translateX(-4000px); }
+          100% { transform: translateX(0); }
+        }
+      `}</style>
+    </div>
+  );
+};
 
 // FAQ Section Data
 const trainingFaqs = [
@@ -126,55 +168,6 @@ const AnimatedCounter = ({ value, duration = 2000 }: AnimatedCounterProps) => {
   }, [value, duration]);
   return <span>{count}{value.replace(/\d/g, '').replace(/[₹\+]/g, '')}</span>;
 };
-
-// Logo Marquee
-interface Logo {
-  name: string;
-  url: string;
-}
-interface LogoMarqueeProps {
-  logos: Logo[];
-  direction?: "left" | "right";
-  speed?: number;
-}
-const LogoMarquee = ({ logos, direction = "left", speed = 25 }: LogoMarqueeProps) => (
-  <div className="relative overflow-hidden py-2">
-    <motion.div
-      className="flex gap-8 whitespace-nowrap"
-      animate={{ x: direction === "left" ? [0, -1000] : [-1000, 0] }}
-      transition={{ x: { repeat: Infinity, repeatType: "loop", duration: speed, ease: "linear" } }}
-    >
-      {Array(8).fill(null).map((_, index) => (
-        <div key={index} className="flex gap-8 shrink-0">
-          {logos.map((logo: Logo, logoIndex: number) => (
-            <motion.div
-              key={logoIndex}
-              data-logo={logo.name}
-              className="flex items-center justify-center h-12 w-32 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2 border border-blue-400/20 shadow-lg"
-              whileHover={{ scale: 1.05, y: -3, backgroundColor: "rgba(255,255,255,0.15)", borderColor: "rgba(59,130,246,0.4)" }}
-              transition={{ duration: 0.2 }}
-            >
-              <Image
-                src={logo.url}
-                alt={`${logo.name} logo`}
-                width={96}
-                height={32}
-                className="h-8 w-auto max-w-24 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-                onError={() => {
-                  // Fallback to text if image fails to load
-                  const parent = document.querySelector(`[data-logo="${logo.name}"]`);
-                  if (parent) {
-                    parent.innerHTML = `<span class='text-xs font-semibold text-white/80'>${logo.name}</span>`;
-                  }
-                }}
-              />
-            </motion.div>
-          ))}
-        </div>
-      ))}
-    </motion.div>
-  </div>
-);
 
 // Floating Elements
 const FloatingElements = () => (

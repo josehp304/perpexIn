@@ -1,5 +1,4 @@
 import React from "react";
-import { TextHoverEffect } from "./ui/text-hover-effect";
 
 interface PreloaderProps {
   onComplete: () => void;
@@ -11,7 +10,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   React.useEffect(() => {
     let start = Date.now();
     let raf: number;
-    const duration = 1400; // 1 second
+    const duration = 1400; // 1.4 seconds
     function animate() {
       const elapsed = Date.now() - start;
       const percent = Math.min(elapsed / duration, 1);
@@ -59,7 +58,15 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
           }}
         >
           <div style={{ width: '100%', overflow: 'visible'}}>
-            <TextHoverEffect text="Perpex" />
+            <h1 style={{
+              fontSize: '4rem',
+              fontWeight: 'bold',
+              color: '#111',
+              textAlign: 'center',
+              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+            }}>
+              Perpex
+            </h1>
           </div>
         </div>
         
