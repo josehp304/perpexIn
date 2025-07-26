@@ -14,9 +14,9 @@ const navigation = {
 
   quickLinks: [
     { name: "Placements", href: "/placements" },
-    { name: "Corporate Training", href: "/corporate-training" },
-    { name: "Student Stories", href: "/student-stories" },
-    { name: "Blogs", href: "/" },
+    { name: "Corporate Training", href: "/corporatetraining" },
+    { name: "Student Stories", href: "/successstories" },
+    { name: "Blogs", href: "/blog" },
     { name: "About Us", href: "/about-us" },
     { name: "Careers", href: "mailto:Support@perpexbschool.in" },
     { name: "Contact", href: "/contact" },
