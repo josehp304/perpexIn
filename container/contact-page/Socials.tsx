@@ -77,12 +77,12 @@ export default function Socials() {
 								<h1 className="paragraph  font-NeueMontreal text-white font-bold">
 							Admissions Phone Number : 
   <a 
-    href="https://wa.me/919789985132?text=Dear%20PerpeX%20Business%20School%20Team%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20BD%20Training%20programs%20and%20placement%20support.%20Could%20you%20please%20provide%20more%20details%20about%20admissions%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Student" 
+    href="https://wa.me/919745100046?text=Dear%20PerpeX%20Business%20School%20Team%2C%20I%20hope%20you%20are%20doing%20well.%20I%20am%20interested%20in%20learning%20more%20about%20your%20BD%20Training%20programs%20and%20placement%20support.%20Could%20you%20please%20provide%20more%20details%20about%20admissions%20or%20let%20me%20know%20a%20suitable%20time%20to%20discuss%20further%3F%20Looking%20forward%20to%20your%20response.%20Best%20regards%2C%20Student" 
     target="_blank" 
     rel="noopener noreferrer"
     className="text-white font-bold underline"
   >
-     +91 97899 85132
+     +91 97451 00046
   </a>
 </h1>
 								</div>
