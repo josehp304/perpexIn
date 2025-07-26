@@ -40,9 +40,9 @@ declare global {
 }
 
 const socialLinks = [
-  { id: 1, title: "Instagram", href: "https://instagram.com", icon: <Instagram size={20} /> },
-  { id: 2, title: "LinkedIn", href: "https://linkedin.com", icon: <Linkedin size={20} /> },
-  { id: 3, title: "WhatsApp", href: "https://wa.me/yourphonenumber", icon: <MessageCircle size={20} /> },
+  { id: 1, title: "Instagram", href: "https://www.instagram.com/perpexbschool/", icon: <Instagram size={20} /> },
+  { id: 2, title: "LinkedIn", href: "https://www.linkedin.com/company/perpex-insights/", icon: <Linkedin size={20} /> },
+  { id: 3, title: "WhatsApp", href:"https://wa.me/919745100046", icon: <MessageCircle size={20} /> },
 ];
 
 // Logo data for marquee - Same as home page
