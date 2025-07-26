@@ -6,6 +6,7 @@ import {
     motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 interface TimelineEntry {
     title: string;
@@ -87,12 +88,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
-                            <button className="px-8 lg:px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center">
+                            <Link href="/contact" className="px-8 lg:px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center">
                                 Begin Journey
-                            </button>
-                            <button className="px-8 lg:px-10 py-4 border border-gray-400 text-gray-300 font-semibold rounded-full hover:bg-gray-800 hover:border-gray-300 transition-all duration-300 text-center">
-                                Learn More
-                            </button>
+                            </Link>
+                           
                         </div>
                     </div>
                 </div>

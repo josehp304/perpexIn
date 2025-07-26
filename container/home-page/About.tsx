@@ -1001,9 +1001,7 @@ const ProgramCard = ({ data }: { data: any }) => {
           </div>
 
           {/* Learn More Button */}
-          <button className="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 border border-white/30">
-            Learn More
-          </button>
+         
         </div>
       </div>
     </div>

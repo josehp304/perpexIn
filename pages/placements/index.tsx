@@ -28,7 +28,7 @@ const logos1 = Array.from({ length: 35 }, (_, i) => ({
 const logos2 = Array.from({ length: 34 }, (_, i) => ({
   name: `Client Logo ${i + 36}`,
   url: `/l${i + 36}.png`,
-}));
+})).filter(logo => logo.name !== 'Client Logo 49');
 
 // FAQ Section Data
 const placementsFaqs = [
