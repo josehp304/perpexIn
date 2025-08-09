@@ -96,6 +96,7 @@ export default function App({
 					gtag('js', new Date());
 					gtag('config', 'G-8WHQZRH1KB');
 				`}
+				<meta name="google-site-verification" content="9R-1myBr_FjECNU4Rcqp9UeWWmvx-AdloTCKToL8Rh8" />
 			</Script>
 			<div className="flex flex-col min-h-screen">
 				<Navbar />
