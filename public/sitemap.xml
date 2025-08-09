@@ -13,6 +13,14 @@
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
+		<loc>https://www.perpexbschool.com/blog</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://www.perpexbschool.com/contact</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
 		<loc>https://www.perpexbschool.com/corporatetraining</loc>
 		<changefreq>weekly</changefreq>
 	</url>
@@ -24,4 +32,4 @@
 		<loc>https://www.perpexbschool.com/about-us</loc>
 		<changefreq>weekly</changefreq>
 	</url>
-</urlset> 
+</urlset>
