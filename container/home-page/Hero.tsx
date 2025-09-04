@@ -559,13 +559,13 @@ const Hero = () => {
 
             {/* Enhanced CTAs - Positioned at bottom of viewport */}
             <div 
-              className={`flex flex-row gap-6 justify-center pb-12 transition-all duration-600 ${
+              className={`flex flex-row sm:gap-6 gap-2 justify-center pb-12 transition-all duration-600 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               }`}
               style={{ transitionDelay: "1000ms" }}
             >
               <button 
-                className="group relative px-10 py-4 bg-white text-blue-900 font-semibold text-lg rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 transition-all duration-300"
+                className="group relative sm:px-10 px-5 sm:py-4 py-2 bg-white text-blue-900 font-semibold text-lg rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl hover:shadow-white/20 active:scale-95 transition-all duration-300"
                 onClick={() => router.push("/contact")}
               >
                 <div 
@@ -581,7 +581,7 @@ const Hero = () => {
               </button>
 
               <button 
-                className="px-10 py-4 border border-white/30 text-white text-lg rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10 active:scale-95 transition-all duration-300"
+                className="sm:px-10 px-2 sm:py-4 py-2 border border-white/30 text-white text-lg rounded-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10 active:scale-95 transition-all duration-300"
                 onClick={() => router.push("/contact")}
               >
                 <span className="flex items-center">

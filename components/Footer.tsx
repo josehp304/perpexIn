@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Left - Brand & Contact */}
           <div className="space-y-6">
             <Link href="/" className="block w-fit">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 sm:flex-row flex-col">
                 <Image
                   src="/navbar.webp"
                   alt="perpex logo"
