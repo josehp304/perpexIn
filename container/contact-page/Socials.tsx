@@ -35,8 +35,8 @@ export default function Socials() {
 			ref={container}>
 			<div className="w-full h-full flex justify-center gap-[50px] items-center flex-col">
 				<div className="flex  flex-col gap-[10px] pb-[50px]">
-					<h1 className="text-[277px] leading-[207px] lg:text-[230px] lg:leading-[170px] md:text-[150px] md:leading-[100px] sm:text-[74px] sm:leading-[68px] xm:text-[64px] xm:leading-[48px] text-center font-bold font-FoundersGrotesk text-white uppercase pointer-events-none">
-						<TextMask>{phrase}</TextMask>
+					<h1 className="text-[277px] leading-[207px] lg:text-[230px] lg:leading-[170px] md:text-[150px] md:leading-[100px] sm:text-[74px] sm:leading-[68px] xm:text-[48px] xm:leading-[48px] text-center font-bold font-FoundersGrotesk text-white uppercase pointer-events-none">
+						<TextMask>{phrase}</TextMask>	
 					</h1>
 				</div>
 				<div className="w-full border-t border-[#21212155] pt-[20px]">
